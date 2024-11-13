@@ -338,7 +338,9 @@ The hotel with the specific id should be updated and ***{hotel-id}.json*** shoul
 There are two test files inside this repository.
 - `hotelRoutes.test.ts`
 - `server.test.ts`
-  
+
+***Make sure the server port is available before running the tests***
+
 `hotelroutes.tes.ts` is for testing the critical API functionality which includes **POST**,**PUT**, and **GET** endpoints.
 `server.test.ts` is for testing if the connection is established.
 To run these tests, use the terminal:
