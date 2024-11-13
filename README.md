@@ -315,7 +315,7 @@ The hotel with the specific id should be updated. Check if **dist/data/hotels/{h
 **Upload images for a hotel**
 
 #### cURL Command:
-**Using Postman recommended for better experience**
+***Using Postman recommended for better experience***
 ```bash
 curl -X POST http://localhost:3000/api/hotel/{hotelId}/images \
 -F "images=@path/to/your/image1.jpg" \
