@@ -333,3 +333,18 @@ The hotel with the specific id should be updated and ***{hotel-id}.json*** shoul
    - Add a `key`: `images` for each image you want to upload, set the `type` to `File`, and choose the files from `Select files`.
 6. **Send** the Request and view the response.
 The hotel with the specific id should be updated and ***{hotel-id}.json*** should have an array of images. Check if **dist/data/hotels/{hotel-id}.json** file is updated. Also, the images should be stored with id inside the folder **dist/data/images/**.
+
+## Unit Tests
+There are two test files inside this repository.
+- `hotelRoutes.test.ts`
+- `server.test.ts`
+  
+`hotelroutes.tes.ts` is for testing the critical API functionality which includes **POST**,**PUT**, and **GET** endpoints.
+`server.test.ts` is for testing if the connection is established.
+To run these tests, use the terminal:
+```bash
+npm test -- hotelRoutes.test.ts
+```
+```bash
+npm test -- server.test.ts
+```
