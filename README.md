@@ -23,132 +23,26 @@ Ensure that the following tools are installed on your system:
 - [Node.js](https://nodejs.org/) (Version 14.x or higher recommended)
 - [npm](https://www.npmjs.com/) (comes with Node.js) or [Yarn](https://yarnpkg.com/)
 
-### Step 1: Create a New Project Directory
-
-```bash
-mkdir my-nodejs-project
-cd my-nodejs-project
-```
-### Step 2: Initialize the Node.js Project
-```bash
-npm init -y
-```
-This command will create a `package.json` file with default settings.
-### Step 3: Install Express.js
-```bash
-npm install express
-```
-### Step 4: Install TypeScript and Related Dependencies
-```bash
-npm install typescript ts-node @types/node @types/express --save-dev
-```
-### Step 5: Create a tsconfig.json File
-```bash
-npx tsc --init
-```
-This file configures TypeScript options. Ensure the following basic settings are present:
-```json
-{
-  "compilerOptions": {
-    "target": "ES6",
-    "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "strict": true,
-    "esModuleInterop": true
-  },
-  "include": ["src/**/*"]
-}
-```
-### Step 6: Set Up the Project Structure
-Create the following folder structure:
-```css
-my-nodejs-project/
-│
-├── src/
-│   ├── index.ts
-│   ├── routes/
-│   │   └── exampleRoute.ts
-│   ├── utils/
-│   │   └── exampleUtil.ts
-│   └── types/
-│       └── index.ts
-│
-└── package.json
-```
-### Step 7: Create an Entry Point (`src/index.ts`)
-Create a basic Express server in `src/index.ts`:
-```typescript
-import express, { Request, Response } from 'express';
-
-const app = express();
-const PORT = process.env.PORT || 3000;
-
-app.use(express.json());
-
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello, TypeScript with Express!');
-});
-
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
-```
-### Step 8: Create a Script to Run the Project
-Add the following scripts to `package.json`:
-```json
-"scripts": {
-  "start": "ts-node src/index.ts",
-  "build": "tsc",
-  "start:prod": "node dist/index.js"
-}
-```
-- `start`: Runs the development server using ts-node.
-- `build`: Compiles TypeScript to JavaScript.
-- `start:prod`: Runs the compiled JavaScript.
-  
-### Step 9: Run the Project
-1. To start the development server, run:
-```bash
-npm run start
-```
-2. To build and run the production server:
-```bash
-npm run build
-npm run start:prod
-```
-### Step 10: Install Additional Middleware (Optional)
-To enhance your project, you may want to install middleware like cors or helmet:
-```bash
-npm install cors helmet
-npm install @types/cors @types/helmet --save-dev
-```
-
 ## Installation Guide
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/username/hotel-management-api.git
+git clone https://github.com/srsaurav0/NodeJs-ExpressJS-Typescript-Assignment-W3.git
 ```
 ### 2. Navigate to the Project Directory
 ```bash
-cd hotel-management-api
+cd NodeJs-ExpressJS-Typescript-Assignment-W3
 ```
 ### 3. Install Dependencies
 ```bash
 npm install
 ```
-### 4. Create a .env File
-```bash
-NODE_ENV=development
-PORT=3000
-```
-### 5. Build the Project
+### 4. Build the Project
 If you're using TypeScript and need to compile the code:
 ```bash
 npm run build
 ```
-### 6. Start the Server
+### 5. Start the Server
 ```bash
 npm start
 ```
